@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Assignment-2</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="content-holder">
+    <div>
+        <input type="text" class="githubUserId" placeholder="github login"/>
+        <button type="submit" id="addBtn" onclick="addCard($('.githubUserId').val());$('.githubUserId').val('')">
+            Add
+        </button>
+    </div>
+    <hr>
+    <div id="sort">
+        <div> Sort By:
+            <a href="#name" onclick="sortByName(asc1);asc1*=-1;asc2=1;asc3=1;">
+               <span id="name" class="sort-heading">Name<span id="name-up-arrow">&#9650</span><span id="name-down-arrow">&#9660</span></span>
+            </a>
+            OR
+            <a href="#location" onclick="sortByLocation(asc2);asc2*=-1;asc1=1;asc3=1;">
+                <span id="location" class="sort-heading">Location<span id="location-up-arrow">&#9650</span><span id="location-down-arrow">&#9660</span></span>
+            </a>
+            OR
+            <a href="#followers" onclick="sortByFollowers(asc3);asc3*=-1;asc1=1;asc2=1;">
+                <span id="followers" class="sort-heading">Followers<span id="followers-up-arrow">&#9650</span><span id="followers-down-arrow">&#9660</span></span>
+            </a>
+        </div>
+    </div>
+    <hr>
+    <div id="content-placeholder">
+    </div>
+</div>
+
+<script id="some-template" type="text/x-handlebars-template">
+    <table>
+        {{#users}}
+        <tr id="card-block">
+            <td>
+                <input type="image" src="resources/cross.jpg" alt="Submit" width="20" height="20" id="close"
+                       onclick="deleteCard('{{login}}')">
+                <a class="card" id="card" href="{{html_url}}">
+                    <img class="avatar-image" src="{{avatar_url}}"/>
+                    <br><br>
+                    <span class="text-heading"> {{name}} </span>
+                    <br>
+                    <span class="text"> <b>Followers</b> : {{followers}} </span>
+                    <br>
+                    <span class="text"> <b>Location</b> : {{location}} </span>
+                </a>
+            </td>
+        </tr>
+        {{/users}}
+    </table>
+</script>
+<script src="lib/handlebars-v4.0.5.js"></script>
+<script src="lib/jquery-3.1.1.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>

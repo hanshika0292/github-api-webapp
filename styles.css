@@ -1,0 +1,65 @@
+#card-block{
+    -webkit-border-radius:5%;
+    -moz-border-radius:5%;
+    border-radius:5%;
+    float: left;
+    width:280px;
+    height:400px;
+    border:1px solid lightgray;
+    margin: 2px;
+    padding: 5px;
+}
+#card-block:hover{
+    border-bottom: 1px solid blue;
+    border-top: 1px solid blue;
+}
+#close{
+    top:10px;
+    left:100px;
+}
+.card{
+    padding:5px;
+    text-decoration: none;
+    color: inherit;
+}
+.card:hover{
+    text-decoration: underline;
+}
+.avatar-image{
+    width:260px;
+    height:250px;
+}
+.text{
+    font-family: FreeMono;
+    font-size: medium;
+    font-color:grey;
+}
+.githubUserId{
+    border-radius: 10%;
+    width:200px;
+    height:30px;
+    font-size: 18px;
+}
+#addBtn{
+    width: 50px;
+    height:30px;
+    border: 1px solid blue;
+    background-color: cornflowerblue;
+    color: white;
+}
+.text-heading{
+    font-size: 20px;
+    font-weight: 400;
+}
+.text{
+    font-size: 15px;
+    font-weight: 100;
+}
+.content-holder{
+    padding-left:30px;
+    padding-top: 30px;
+}
+.sort-heading{
+    text-decoration: none;
+    color: black;
+}
